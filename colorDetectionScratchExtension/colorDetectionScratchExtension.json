@@ -1,0 +1,14 @@
+{ "extensionName" : "Color Detection", "extensionPort" : 8888,
+  "blockSpecs" : [
+	 [" ", "Camera %n", "setCamera", 0],
+	 [" ", "Detect Color %c", "setColor", ""],
+	 [" ", "Color Range: %m.hsvrange %m.hsvval = %n", "setRange", " "],
+	 [" ", "Minimum Size %n", "setMinSize", 0],
+	 ["b", "Detected?", "isDetected"]
+  ],
+	 "menus" : {
+	   "colorspaces" : ["RGB", "Gray", "HSV"],
+		"hsvrange" : ["Lower", "Upper"],
+		"hsvval" : ["Hue", "Saturation", "Value"]
+    }
+}
