@@ -1,0 +1,12 @@
+{ "extensionName" : "Espeak", "extensionPort" : 9999,
+  "blockSpecs" : [
+	 [" ", "Gender: %m.gender", "setGender", ""],
+	 [" ", "Parameter %m.params %n", "setParam", ""],
+	 [" ", "Say: %s", "say", " "],
+	 ["b", "isPlaying?", "isPlaying", 0]
+  ],
+	 "menus" : {
+		"gender" : ["Male", "Female", "Robot"],
+		"params" : ["Pitch", "Volume", "Rate"]
+    }
+}
