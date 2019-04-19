@@ -2,9 +2,6 @@
 
 import urllib2
 from flask import Flask
-import os
-import sys
-from os import path
 from espeak import espeak
 
 app = Flask("scratch_helper")
@@ -18,7 +15,7 @@ def poll():
 
 @app.route('/setGender/<string:gen>')
 def setGender(gen):
-	g = espeak.Gnder.Male
+	g = espeak.Gender.Male
 	if gen == "Female":
 		g = espeak.Gender.Female
 	espeak.set_voice("en", gender=g)
@@ -43,7 +40,6 @@ def say(st):
 
 @app.route('/reset_all')
 def reset_all():
-    reset()
     return "OK"
 
 app.run('0.0.0.0', port=9999)
